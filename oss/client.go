@@ -1100,9 +1100,9 @@ func (client *Client) setupHttpRequest(req *request) (*http.Request, error) {
 // body will be unmarshalled on it.
 func (client *Client) doHttpRequest(c *http.Client, hreq *http.Request, resp interface{}) (*http.Response, error) {
 
-	if true {
-		log.Printf("%s %s ...\n", hreq.Method, hreq.URL.String())
-	}
+	// if true {
+	// 	log.Printf("%s %s ...\n", hreq.Method, hreq.URL.String())
+	// }
 	hresp, err := c.Do(hreq)
 	if err != nil {
 		return nil, err
@@ -1324,7 +1324,7 @@ func (b *Bucket) CopyLargeFileInParallel(sourcePath string, destPath string, con
 
 	currentLength, err := b.GetContentLength(sourcePath)
 
-	log.Printf("Parallel Copy large file[size: %d] from %s to %s\n", currentLength, sourcePath, destPath)
+	// log.Printf("Parallel Copy large file[size: %d] from %s to %s\n", currentLength, sourcePath, destPath)
 
 	if err != nil {
 		return err
